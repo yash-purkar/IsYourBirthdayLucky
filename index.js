@@ -7,9 +7,11 @@ const outputBox = document.querySelector("#output_box");
 function compareValues(sum, luckyNumber) {
   if (sum % luckyNumber === 0) {
     outputBox.innerHTML = "You are Lucky...🚀";
+    outputBox.style.color = "green"
   }
   else {
     outputBox.innerHTML = "You are not Lucky😞";
+    outputBox.style.color = "red"
   }
 }
 outputBox.innerHTML = "Plz fill both the fields... ";
@@ -17,7 +19,7 @@ outputBox.innerHTML = "Plz fill both the fields... ";
 function checkBirthDateIsLucky() {
   const dob = dateOfBirth.value;
   const sum = calculateSum(dob);
-  if (sum && dob) {
+  if (sum && dob && luckyNumber.value) {
     compareValues(sum, luckyNumber.value)
   }
   else {
