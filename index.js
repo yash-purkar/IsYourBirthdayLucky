@@ -6,13 +6,13 @@ const outputBox = document.querySelector("#output_box");
 
 function compareValues(sum, luckyNumber) {
   if (sum % luckyNumber === 0) {
-    outputBox.value = "You are Lucky...🚀";
+    outputBox.innerHTML = "You are Lucky...🚀";
   }
   else {
-    outputBox.value = "You are not Lucky😞";
+    outputBox.innerHTML = "You are not Lucky😞";
   }
 }
-outputBox.value = "Plz fill both the fields... ";
+outputBox.innerHTML = "Plz fill both the fields... ";
 
 function checkBirthDateIsLucky() {
   const dob = dateOfBirth.value;

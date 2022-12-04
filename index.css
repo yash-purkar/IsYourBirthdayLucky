@@ -1,0 +1,67 @@
+body {
+  color: blueviolet;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.container {
+  width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 1px solid blueviolet;
+  padding: 25px;
+}
+
+input {
+  border: none;
+  outline: none;
+
+  color: #fff;
+  margin-right: 6px;
+  width: 30%;
+  margin: auto;
+  padding: 15px;
+  border-bottom: 1px solid blueviolet;
+  margin-bottom: 40px;
+  color: #000;
+}
+
+::placeholder {
+  padding: 20px;
+  color: blueviolet;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+button {
+  width: fit-content;
+  align-self: center;
+  padding: 8px 16px;
+  background-color: blueviolet;
+  border: 1px solid blueviolet;
+  color: #fff;
+  letter-spacing: 1.5px;
+}
+
+button:hover {
+  background-color: #fff;
+  border: 1px solid blueviolet;
+  color: blueviolet;
+  cursor: pointer;
+}
+
+input[type="date"] {
+  /* background: blueviolet; */
+  color: black;
+  text-align: center;
+}
+
+input[type="number"] {
+  /* background: blueviolet; */
+  color: black;
+  text-align: center;
+}
