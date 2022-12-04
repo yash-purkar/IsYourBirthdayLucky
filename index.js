@@ -1,12 +1,29 @@
 const dateOfBirth = document.querySelector("#dob");
 const luckyNumber = document.querySelector("#luckyNum");
 const checkBtn = document.querySelector("#check_num");
+const outputBox = document.querySelector("#output_box");
+// console.log(dateOfBirth.value);
 
-console.log(dateOfBirth.value);
+function compareValues(sum, luckyNumber) {
+  if (sum % luckyNumber === 0) {
+    outputBox.value = "You are Lucky...🚀";
+  }
+  else {
+    outputBox.value = "You are not Lucky😞";
+  }
+}
+outputBox.value = "Plz fill both the fields... ";
 
 function checkBirthDateIsLucky() {
   const dob = dateOfBirth.value;
   const sum = calculateSum(dob);
+  if (sum && dob) {
+    compareValues(sum, luckyNumber.value)
+  }
+  else {
+    outputBox.style.color = "red";
+  }
+
 }
 
 function calculateSum(dob) {
@@ -16,7 +33,7 @@ function calculateSum(dob) {
   for (let i = 0; i < dob.length; i++) {
     sum = sum + Number(dob.charAt(i))
   }
-  console.log(sum);
+
   return sum;
 }
 
