@@ -27,6 +27,7 @@ function checkBirthDateIsLucky() {
 
     if (luckyNumber.value <= 0) {
       outputBox.innerText = "Lucky Number should be greater than 0"
+      outputBox.style.color = "red";
     }
   }
   else {
