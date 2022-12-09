@@ -4,6 +4,9 @@ const checkBtn = document.querySelector("#check_num");
 const outputBox = document.querySelector("#output_box");
 // console.log(dateOfBirth.value);
 
+if (luckyNumber.value <= 0) {
+  outputBox.innerText = "Lucky Number should be greater than 0";
+}
 function compareValues(sum, luckyNumber) {
   if (sum % luckyNumber === 0) {
     outputBox.innerHTML = "You are Lucky...🚀";
@@ -20,7 +23,11 @@ function checkBirthDateIsLucky() {
   const dob = dateOfBirth.value;
   const sum = calculateSum(dob);
   if (sum && dob && luckyNumber.value) {
-    compareValues(sum, luckyNumber.value)
+    compareValues(sum, luckyNumber.value);
+
+    if (luckyNumber.value <= 0) {
+      outputBox.innerText = "Lucky Number should be greater than 0"
+    }
   }
   else {
     outputBox.style.color = "red";
